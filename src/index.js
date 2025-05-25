@@ -41,6 +41,12 @@ app.use("/", homeRoutes);
 app.use("/api/recipes", recipeRoutes);
 app.use("/api/mealPlan", mealPlanRoutes);
 app.use("/profile", profileRoutes);
+app.use("/api/student", (req, res)=>{
+    return res.status(200).json({
+        name: "Aprylle Joy Ablaza",
+        studentId: 224698946
+    })
+})
 
 // Start server
 app.listen(ENV.PORT, () => {
