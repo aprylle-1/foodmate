@@ -8,6 +8,17 @@ A `Dockerfile` defines how to build a Docker image — a lightweight, standalone
 
 `docker-compose.yml` defines and manages multi-container applications. It tells Docker how to run your containers (like your Node app and MongoDB) together.
 
+
+## Required: Create a `.env` File
+
+Before building the Docker image, create a `.env` file in the root directory of the project. This file is used to store environment variables required by the application. Below shows what are the required values in your `.env` file:
+
+```bash
+SPOONACULAR_KEY= your_spoonacular_api_key
+MONGO_URI="mongodb://mongo:27017/foodmate"
+JWT_SECRET = your_secret_key
+```
+
 ## 1. How to Build the Image
 
 From the root of your project (where the `Dockerfile` and `docker-compose.yml` live), run:
