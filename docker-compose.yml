@@ -11,6 +11,7 @@ services:
       - MONGO_URI=mongodb://mongo:27017/foodmate
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
 
   mongo:
     image: mongo:6
