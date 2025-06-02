@@ -13,10 +13,22 @@ A `Dockerfile` defines how to build a Docker image — a lightweight, standalone
 
 Before building the Docker image, create a `.env` file in the root directory of the project. This file is used to store environment variables required by the application. Below shows what are the required values in your `.env` file:
 
+
+
 ```bash
 SPOONACULAR_KEY= your_spoonacular_api_key
 MONGO_URI="mongodb://mongo:27017/foodmate"
 JWT_SECRET = your_secret_key
+```
+
+### Important Notes:
+
+- For the SPOONACULAR_KEY, you need to create an account on spoonacular.com and obtain your own API key.
+
+- For the JWT_SECRET, you can use any string, but it is recommended to generate a strong secret for security purposes. For example, you can generate a secure secret using a command like:
+
+```
+openssl rand -hex 64
 ```
 
 ## 1. How to Build the Image
